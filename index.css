@@ -1,0 +1,150 @@
+/* Basic Styling */
+body {
+    font-family: Arial, sans-serif; /* Set the font for the entire page */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ensure the body takes up the full height of the viewport */
+    margin: 0;
+    background-image: url('mountain-background.jpg'); /* Add the mountain background image */
+    background-size: cover; /* Ensure the image covers the entire background */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the background image from repeating */
+}
+
+.card {
+    background-color: rgba(94, 90, 90, 0.9); /* Slightly transparent dark gray background for the weather card */
+    border-radius: 10px; /* Rounded corners for the card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow around the card */
+    padding: 20px; /* Padding inside the card */
+    max-width: 400px; /* Maximum width of the card */
+    width: 100%; /* Card width is 100% of its container */
+    text-align: center; /* Center text alignment */
+}
+
+.search {
+    display: flex; /* Use flexbox for the search input and button */
+    margin-bottom: 20px; /* Space below the search bar */
+}
+
+.search input {
+    flex: 1; /* Input takes up all available space */
+    padding: 10px; /* Padding inside the input field */
+    border: 1px solid #ddd; /* Light border around the input */
+    border-radius: 5px 0 0 5px; /* Rounded corners on the left side */
+    outline: none; /* Remove outline on focus */
+}
+
+.search button {
+    padding: 10px; /* Padding inside the button */
+    background-color: #333; /* Dark background for the button */
+    border: none; /* Remove the border */
+    border-radius: 0 5px 5px 0; /* Rounded corners on the right side */
+    cursor: pointer; /* Show a pointer cursor on hover */
+}
+
+.search button img {
+    width: 20px; /* Set the width of the search icon */
+    height: 20px; /* Set the height of the search icon */
+}
+
+.error {
+    display: none; /* Initially hide the error message */
+    color: rgb(236, 229, 229); /* Red text for the error message */
+    margin-bottom: 20px; /* Space below the error message */
+    font-size: 35px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.weather {
+    display: none; /* Initially hide the weather information */
+}
+
+.weather-icon {
+    width: 100px; /* Set the width of the weather icon */
+    height: 100px; /* Set the height of the weather icon */
+}
+
+.temp {
+    font-size: 48px; /* Large font size for the temperature */
+    margin: 10px 0; /* Margin above and below the temperature */
+}
+
+.city {
+    font-size: 24px; /* Medium font size for the city name */
+    margin-bottom: 20px; /* Space below the city name */
+}
+
+.details {
+    display: flex; /* Use flexbox for the details section */
+    justify-content: space-around; /* Space out the details columns */
+}
+
+.col {
+    display: flex; /* Use flexbox for the column content */
+    align-items: center; /* Center items vertically */
+}
+
+.col img {
+    width: 30px; /* Set the width of the detail icons */
+    height: 30px; /* Set the height of the detail icons */
+    margin-right: 10px; /* Space between the icon and text */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .card {
+        max-width: 90%; /* Allow the card to take up 90% of the viewport width */
+        padding: 15px; /* Reduce padding for smaller screens */
+    }
+
+    .temp {
+        font-size: 36px; /* Reduce the temperature font size */
+    }
+
+    .city {
+        font-size: 20px; /* Reduce the city name font size */
+    }
+
+    .details {
+        flex-direction: column; /* Stack the details vertically */
+        align-items: center; /* Center the details */
+    }
+
+    .col {
+        margin-bottom: 10px; /* Add space below each column */
+    }
+}
+
+@media (max-width: 480px) {
+    .search input {
+        font-size: 14px; /* Reduce the font size in the search input */
+        padding: 8px; /* Reduce padding for smaller screens */
+    }
+
+    .search button {
+        padding: 8px; /* Reduce padding for smaller screens */
+    }
+
+    .temp {
+        font-size: 32px; /* Further reduce the temperature font size */
+    }
+
+    .city {
+        font-size: 18px; /* Further reduce the city name font size */
+    }
+
+    .col img {
+        width: 25px; /* Reduce the icon size */
+        height: 25px; /* Reduce the icon size */
+    }
+
+    .details {
+        flex-direction: column; /* Stack the details vertically */
+        align-items: center; /* Center the details */
+    }
+
+    .col {
+        margin-bottom: 5px; /* Add less space below each column */
+    }
+}
